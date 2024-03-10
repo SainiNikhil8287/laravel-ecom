@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use App\Models\Test;
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,10 @@ Route::get('/', function () {
     return view('welcome')->with(compact('active'));
 });
 
+Route::get('/login',function(){ return view('login');});
+Route::post('/login',[UserController::class,'login']);
+
+
 // Route::get('/home/{name?}',
 //     function ($name = null)
 //     {
@@ -35,7 +40,6 @@ Route::get('/', function () {
 //         return view('about')->with(compact('active'));
 // });
 // Route::view('/login','login');
-Route::get('/login',function(){return view('login');});
 
 // Route::get('/register',[RegisterController::class,'index']);
 Route::get('/register',[RegisterController::class,'create']);
