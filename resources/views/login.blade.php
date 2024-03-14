@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
+
+
 <div class="col-md-12 mt-4">
 
     <form method="post" action="login">

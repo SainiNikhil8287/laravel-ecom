@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductsController;
 use App\Models\Test;
 use Illuminate\Support\Facades\Redirect;
 /*
@@ -25,6 +26,7 @@ Route::get('/', function () {
 Route::get('/login',function(){ return view('login');})->name('login');
 Route::post('/login',[UserController::class,'login']);
 
+Route::get('/products',[ProductsController::class,'index'])->name('prox');
 
 // Route::get('/home/{name?}',
 //     function ($name = null)

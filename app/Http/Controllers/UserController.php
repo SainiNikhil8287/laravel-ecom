@@ -18,11 +18,12 @@ class UserController extends Controller
 
             if($user && Hash::check($req->password,$user->password))
             {
-                // return back()->with("Error");
-                echo "working";
+                $req->session()->put('user',$user);
+                 return redirect('/products');
 
             }else{
-                echo "error";
+                echo 'Username or Password Incorrect<br>';
+                echo '<a href="'.url()->previous().'">Back</a>';
             }
         exit;
     }
