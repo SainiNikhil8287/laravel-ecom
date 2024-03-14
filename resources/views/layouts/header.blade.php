@@ -19,4 +19,7 @@
         <a href="/register" class="nav-link <?php echo ($active == 'register')?'active':''; ?>">Register</a>
     </li>
 
+    <li class="nav-item">
+        <a href="{{ url()->previous() }}" class="nav-link " >Back</a>
+    </li>
 </ul>

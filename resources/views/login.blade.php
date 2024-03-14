@@ -3,14 +3,15 @@
 @section('content')
 <div class="col-md-12 mt-4">
 
-    <form method="" action="">
+    <form method="post" action="login">
+        @csrf
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input required type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input required type="password" class="form-control" id="exampleInputPassword1">
+        <input required type="password" name="password" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">

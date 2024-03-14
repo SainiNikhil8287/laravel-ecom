@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Models\Test;
+use Illuminate\Support\Facades\Redirect;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,8 @@ Route::get('/', function () {
     return view('welcome')->with(compact('active'));
 });
 
-Route::get('/login',function(){ return view('login');});
+
+Route::get('/login',function(){ return view('login');})->name('login');
 Route::post('/login',[UserController::class,'login']);
 
 
