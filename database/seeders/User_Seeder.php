@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class User_Seeder extends Seeder
 {
-
+//php artisan db:seed --class=User_Seeder //run this command
     public function run()
     {
         DB::table('users')->insert([
