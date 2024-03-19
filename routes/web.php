@@ -27,7 +27,9 @@ Route::get('/login',function(){ return view('login');})->name('login');
 Route::post('/login',[UserController::class,'login']);
 
 Route::get('/products',[ProductsController::class,'index'])->name('prox');
-
+Route::get('/details/{id}',[ProductsController::class,'details']);
+Route::get('/search-products',[ProductsController::class,'search'])->name('search');
+Route::post('/add-to-cart',[ProductsController::class,'addToCart'])->name('addToCart');;
 // Route::get('/home/{name?}',
 //     function ($name = null)
 //     {
